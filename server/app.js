@@ -8,6 +8,7 @@ app.use(bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 })); 
+
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(cookieParser());
@@ -16,6 +17,4 @@ const authRoutes = require("./routes/auth");
 
 app.use('/auth',authRoutes);
 
-app.listen(4000);
-
-sequelize.authenticate();
+module.exports = app
