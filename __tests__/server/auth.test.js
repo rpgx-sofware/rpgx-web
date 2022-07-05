@@ -8,7 +8,6 @@ describe("auth routes", () => {
     beforeAll(async() => {
        await sequelize.sync({ force: true });
     });
-
     test("/register",async () => {
         await request(app)
             .post("/auth/register")
@@ -23,7 +22,7 @@ describe("auth routes", () => {
                 pwd: "pwd",email: "email@email.com"
             }).then(response => {
                 expect(response.statusCode).toBe(500);
-            });
+            });    
     });
     let refreshCookie;
     test("/login",async () => {
