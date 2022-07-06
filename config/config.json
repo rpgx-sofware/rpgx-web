@@ -2,6 +2,7 @@
   "development": {
     "username": "root",
     "storage": "./database.sqlite",
+    "logging": false,
     "dialect": "sqlite"
   },
   "test": {

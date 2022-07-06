@@ -60,7 +60,8 @@ router.get("/refresh", async(req, res) => {
                 process.env.ACCESS_TOKEN_SECRET,
                 {expiresIn: '30s'}
             );
-            res.json({accessToken})
+            console.log("verify token success")
+            res.json({token: accessToken,perms: ["view.basic"]})
         }
     )
 })

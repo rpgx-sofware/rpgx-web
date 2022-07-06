@@ -4,6 +4,7 @@ import useAuth from "../hooks/useAuth";
 const RequireAuth = ({neededPerms}) => {
     const {auth} = useAuth();
     const location = useLocation();
+    console.log(auth);
 
     return (
         auth?.perms?.find(perm => neededPerms?.includes(perm))

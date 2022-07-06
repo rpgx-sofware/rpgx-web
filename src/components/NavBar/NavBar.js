@@ -6,11 +6,11 @@ const NavBar = (props) => {
     let links = []
     let linksRight = []
     for (let link in props.links) {
-        links.push(<li><Link key={link} to={props.links[link].dest}>{props.links[link].text}</Link></li>)
+        links.push(<li key={link}><Link to={props.links[link].dest}>{props.links[link].text}</Link></li>)
     }
 
     for (let link in props.linksRight) {
-        linksRight.push(<li><Link key={link} to={props.linksRight[link].dest}>{props.linksRight[link].text}</Link></li>)
+        linksRight.push(<li key={link}><Link to={props.linksRight[link].dest} onClick={props.linksRight[link].action}>{props.linksRight[link].text}</Link></li>)
     }
 
     return(

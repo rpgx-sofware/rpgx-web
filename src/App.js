@@ -11,14 +11,13 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route path="/register" element={<Register/>}/>
-        <Route path="/login" element={<Login/>} />
         <Route element={<PersistLogin/>}>
+          <Route path="/register" element={<Register/>}/>
+          <Route path="/login" element={<Login/>} />
           <Route element={<RequireAuth neededPerms={["view.basic"]} />}>
             <Route path="/dashboard" element={<Dashboard/>} />
           </Route>
         </Route>
-
       </Route>
     </Routes>
   );

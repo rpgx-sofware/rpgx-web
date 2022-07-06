@@ -2,16 +2,17 @@ import { useContext } from "react";
 import useAuth from "./useAuth";
 
 const useRefreshToken = () => {
-    const {setAuth} = useAuth();
+    const {auth,setAuth} = useAuth();
     const refresh = async () => {
         const response = await fetch('/auth/refresh',{
+            method: "GET",
             credentials: 'include', 
         })
+        let data = await response.json()
         setAuth(prev => {
-            console.log(response.body)
             return {...prev, 
-                perms: response.body.perms,
-                accessToken: response.body.token}
+                perms: data.perms,
+                accessToken: data.token}
         })
         return response.body.token;
     }
