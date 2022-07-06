@@ -1,3 +1,35 @@
+@import '../../style/variables.scss';
+
 .title {
-    color: red
+
+}
+
+nav{
+    background-color: $primary-color;
+    display: flex;
+    align-items: center;
+    column-gap: 10px
+}
+
+.links{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.linksRight{
+    margin-left: auto;
+    margin-right: 50px ;
+}
+
+a {
+    text-decoration: none;
+    color: $main-font-color
+}
+
+a {
+    display: inline;
 }

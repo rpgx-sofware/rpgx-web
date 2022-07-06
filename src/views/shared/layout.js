@@ -7,8 +7,18 @@ const Layout = () => {
                 {
                     text: "Dashboard",
                     dest: "/dashboard"
+                },
+            ]}
+            linksRight={[
+                {
+                    text: "Login",
+                    dest: "/login"
+                },
+                {
+                    text: "register",
+                    dest: "/register"
                 }
-            ]} 
+            ]}
             title="RPGX"
             />
             <Outlet/>
