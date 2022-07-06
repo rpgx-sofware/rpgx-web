@@ -16,5 +16,5 @@ app.use(cookieParser());
 const authRoutes = require("./routes/auth");
 
 app.use('/auth',authRoutes);
-
+sequelize.authenticate();
 module.exports = app

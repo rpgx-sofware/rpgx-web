@@ -1,7 +1,7 @@
 const request = require("supertest");
-const app = require("../../server/app")
-const { sequelize,User } = require('../../server/models');
-require('dotenv').config({ path: '../../server/.env' })
+const app = require("../../app")
+const { sequelize,User } = require('../../models');
+require('dotenv').config({ path: '../../.env' })
 
 describe("auth routes", () => {
 
